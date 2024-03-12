@@ -53,7 +53,7 @@ class HoldingsViewController: UIViewController {
             UIView.animate(withDuration: 1) {
                 self.expendableView.isHidden = false
                 self.expendedViewHeight.constant = expendedViewHeight
-                self.view.layoutIfNeeded()
+//                self.view.layoutIfNeeded()
                 self.expendableView.bindDataToExpendedView(for: investmentResult)
                
             }
@@ -68,6 +68,11 @@ class HoldingsViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func dismissHoldingsView(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
 }
 
 extension HoldingsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -84,6 +89,6 @@ extension HoldingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 70
     }
 }

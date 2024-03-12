@@ -16,7 +16,7 @@ class ViewController: UIViewController {
 
     @IBAction func viewHoldingsClicked(_ sender: UIButton) {
         let holdingsViewController = HoldingsViewController()
-//        holdingsViewController.modalPresentationStyle = .overFullScreen
+        holdingsViewController.modalPresentationStyle = .overFullScreen
         present(holdingsViewController, animated: true)
     }
     

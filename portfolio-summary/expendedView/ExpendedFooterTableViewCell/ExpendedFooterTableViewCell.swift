@@ -19,8 +19,8 @@ class ExpendedFooterTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        investementLabel.font = UIFont.systemFont(ofSize: 14, weight: .bold)
-        amountLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        investementLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        amountLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
     }
     
     func bindCellData(){

@@ -27,18 +27,16 @@ struct UserHolding: Codable {
         return avgPrice * Double(quantity)
     }
     var profitAndLoss: Double {
-        return currentValue * investmentValue
+        return currentValue - investmentValue
     }
 }
 
 struct InvestmentResult {
-    let totalCurrentValue: Double
-    let totalInvestment: Double
-    let totalProfitAndLoss: Double
-    let todaysProfitAndLoss: Double
+    let totalCurrentValue: String
+    let totalInvestment: String
+    let totalProfitAndLoss: String
+    let todaysProfitAndLoss: String
 }
-
-
 
 struct HoldingResponse: Codable {
     var userHolding: [UserHolding]
@@ -92,8 +90,13 @@ class HoldingsViewModel {
         }
         
         var totalProfitAndLoss: Double = totalCurrentValue - totalInvestment
-        return InvestmentResult(totalCurrentValue: totalCurrentValue, totalInvestment: totalInvestment, totalProfitAndLoss: totalProfitAndLoss, todaysProfitAndLoss: todaysProfitAndLoss)
+        
+        let totalCurrentValueStr = String(format: "\u{20B9}%.2f", totalCurrentValue)
+        let totalInvestmentStr = String(format: "\u{20B9}%.2f", totalInvestment)
+        let todaysProfitAndLossStr = String(format: "\u{20B9}%.2f", todaysProfitAndLoss)
+        let totalProfitAndLossStr = String(format: "\u{20B9}%.2f", totalProfitAndLoss)
+        
+        return InvestmentResult(totalCurrentValue: totalCurrentValueStr, totalInvestment: totalInvestmentStr, totalProfitAndLoss: todaysProfitAndLossStr, todaysProfitAndLoss: totalProfitAndLossStr)
     }
-    
     
 }

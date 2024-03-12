@@ -23,15 +23,39 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OWL-It-Qn1" userLabel="headerView">
-                    <rect key="frame" x="0.0" y="59" width="393" height="40"/>
-                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="54"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upstox Holding" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aI5-QE-woD">
+                            <rect key="frame" x="9.9999999999999929" y="16.666666666666671" width="122.33333333333331" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bx0-sw-wuf">
+                            <rect key="frame" x="343" y="7" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="659-Cx-fMd"/>
+                                <constraint firstAttribute="height" constant="40" id="jz2-8b-byj"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="close.png"/>
+                            <connections>
+                                <action selector="dismissHoldingsView:" destination="-1" eventType="touchUpInside" id="Z0K-dc-Mrv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="cHK-ft-bIU"/>
+                        <constraint firstAttribute="trailing" secondItem="bx0-sw-wuf" secondAttribute="trailing" constant="10" id="Auh-Iq-WyT"/>
+                        <constraint firstItem="bx0-sw-wuf" firstAttribute="centerY" secondItem="OWL-It-Qn1" secondAttribute="centerY" id="GbF-gi-0Qt"/>
+                        <constraint firstAttribute="height" constant="54" id="cHK-ft-bIU"/>
+                        <constraint firstItem="aI5-QE-woD" firstAttribute="centerY" secondItem="OWL-It-Qn1" secondAttribute="centerY" id="cik-LX-mao"/>
+                        <constraint firstItem="aI5-QE-woD" firstAttribute="leading" secondItem="OWL-It-Qn1" secondAttribute="leading" constant="10" id="tZc-Jf-vzZ"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FCj-CU-FzC">
-                    <rect key="frame" x="0.0" y="99" width="393" height="719"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <rect key="frame" x="0.0" y="113" width="393" height="705"/>
+                    <color key="backgroundColor" systemColor="systemGray2Color"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6I5-L2-xds" userLabel="expendableView" customClass="CustomExpendedView" customModule="portfolio_summary" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="818" width="393" height="0.0"/>
@@ -56,15 +80,19 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FCj-CU-FzC" secondAttribute="trailing" id="xGb-U6-3aR"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="204" y="67"/>
+            <point key="canvasLocation" x="203.81679389312976" y="66.901408450704224"/>
         </view>
     </objects>
     <resources>
+        <image name="close.png" width="16" height="16"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E102A09F-97F8-4419-96F6-BA489CCBA284"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "0AA786DC-7E96-4595-A88F-BFA6AA36E58C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38F963E7-53A9-4F36-B6DB-94FE8ED47B6C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "portfolio-summary/controllers/HoldingsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "expendableViewSetup()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "38F963E7-53A9-4F36-B6DB-94FE8ED47B6C - c0957d35cda2a107"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in portfolio_summary.HoldingsViewController.expendableViewSetup() -&gt; ()"
+                  moduleName = "portfolio-summary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pranavpratap/Documents/Sinchan/Random-Projects/portfolio-summary/portfolio-summary/controllers/HoldingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "388">
+               </Location>
+               <Location
+                  uuid = "38F963E7-53A9-4F36-B6DB-94FE8ED47B6C - c0957d35cda2a166"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in portfolio_summary.HoldingsViewController.expendableViewSetup() -&gt; ()"
+                  moduleName = "portfolio-summary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pranavpratap/Documents/Sinchan/Random-Projects/portfolio-summary/portfolio-summary/controllers/HoldingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "38F963E7-53A9-4F36-B6DB-94FE8ED47B6C - c0957d35cda2a166"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in portfolio_summary.HoldingsViewController.expendableViewSetup() -&gt; ()"
+                  moduleName = "portfolio-summary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pranavpratap/Documents/Sinchan/Random-Projects/portfolio-summary/portfolio-summary/controllers/HoldingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "38F963E7-53A9-4F36-B6DB-94FE8ED47B6C - c0957d35cda2a124"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in portfolio_summary.HoldingsViewController.expendableViewSetup() -&gt; ()"
+                  moduleName = "portfolio-summary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pranavpratap/Documents/Sinchan/Random-Projects/portfolio-summary/portfolio-summary/controllers/HoldingsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31FE6D89-FAD6-4229-9A76-CFE318EE4851"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "portfolio-summary/expendedView/CustomExpendedView/CustomExpendedView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4D754DF-1D39-49DA-9678-1398943641F4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "portfolio-summary/expendedView/CustomExpendedView/CustomExpendedView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A948B218-0908-4F69-B4CD-5DD57F30AD36"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "portfolio-summary/expendedView/CustomExpendedView/CustomExpendedView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "A948B218-0908-4F69-B4CD-5DD57F30AD36 - e30ee0729b8cf735"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "portfolio_summary.CustomExpendedView.tableView(_: __C.UITableView, numberOfRowsInSection: Swift.Int) -&gt; Swift.Int"
+                  moduleName = "portfolio-summary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pranavpratap/Documents/Sinchan/Random-Projects/portfolio-summary/portfolio-summary/expendedView/CustomExpendedView/CustomExpendedView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "A948B218-0908-4F69-B4CD-5DD57F30AD36 - e30ee0729b8cf777"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "portfolio_summary.CustomExpendedView.tableView(_: __C.UITableView, numberOfRowsInSection: Swift.Int) -&gt; Swift.Int"
+                  moduleName = "portfolio-summary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pranavpratap/Documents/Sinchan/Random-Projects/portfolio-summary/portfolio-summary/expendedView/CustomExpendedView/CustomExpendedView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DA114A5B-029C-4049-89BE-A6EF4919EF63"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "portfolio-summary/expendedView/CustomExpendedView/CustomExpendedView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "expendButtonClicked(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DA114A5B-029C-4049-89BE-A6EF4919EF63 - 2a15916f985c3052"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "portfolio_summary.CustomExpendedView.expendButtonClicked(__C.UIButton) -&gt; ()"
+                  moduleName = "portfolio-summary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pranavpratap/Documents/Sinchan/Random-Projects/portfolio-summary/portfolio-summary/expendedView/CustomExpendedView/CustomExpendedView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "1348">
+               </Location>
+               <Location
+                  uuid = "DA114A5B-029C-4049-89BE-A6EF4919EF63 - 2a15916f985c3052"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "portfolio_summary.CustomExpendedView.expendButtonClicked(__C.UIButton) -&gt; ()"
+                  moduleName = "portfolio-summary"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pranavpratap/Documents/Sinchan/Random-Projects/portfolio-summary/portfolio-summary/expendedView/CustomExpendedView/CustomExpendedView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "1196">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

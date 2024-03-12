@@ -9,7 +9,6 @@ import UIKit
 
 class CustomExpendedView: UIView{
     
-    //    @IBOutlet var expendedView: UIView!
     @IBOutlet weak var expendButton: UIButton!
     @IBOutlet weak var investmentTableView: UITableView!
     
@@ -18,7 +17,7 @@ class CustomExpendedView: UIView{
     @IBOutlet weak var profitAndLossTextLabel: UILabel!
     @IBOutlet weak var profitAndLossValueLable: UILabel!
     
-    private var investmentResult: InvestmentResult
+    private var investmentResult: InvestmentResult?
     private var isExpended: Bool = true
     
     var animateBottomViewForExpendStatus: ((_ isExpended: Bool) -> Void)?
@@ -30,10 +29,8 @@ class CustomExpendedView: UIView{
     }
     
     required init?(coder: NSCoder) {
-        self.investmentResult = InvestmentResult(totalCurrentValue: 10, totalInvestment: 10, totalProfitAndLoss: 10, todaysProfitAndLoss: 10)
         super.init(coder: coder)
         customInit()
-        //        fatalError("init(coder:) has not been implemented")
     }
     
     private func customInit() {
@@ -48,8 +45,10 @@ class CustomExpendedView: UIView{
         investmentTableView.register(UINib(nibName: "ExpendedFooterTableViewCell", bundle: nil), forCellReuseIdentifier: "ExpendedFooterTableViewCell")
         
         expendButton.setImage(UIImage(named: "arrow-down-small"), for: .normal)
-        //        totalInvestmentLabel.font = UIFont.systemFont(ofSize: 14, weight: .bold)
-        //        totalInvestmentAmount.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        
+        profitAndLossTextLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        profitAndLossValueLable.font = UIFont.systemFont(ofSize: 16)
+        
         
     }
     
@@ -69,7 +68,7 @@ class CustomExpendedView: UIView{
         self.investmentResult = investmentResult
         
         self.profitAndLossTextLabel.text = "Profit & Loss:"
-        self.profitAndLossValueLable.text = "\(investmentResult.totalProfitAndLoss)"
+        self.profitAndLossValueLable.text = investmentResult.totalProfitAndLoss
         
         DispatchQueue.main.async {
             self.investmentTableView.reloadData()
@@ -88,16 +87,16 @@ extension CustomExpendedView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ExpendedFooterTableViewCell", for: indexPath) as! ExpendedFooterTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ExpendedFooterTableViewCell", for: indexPath) as? ExpendedFooterTableViewCell, let investmentResult else { return UITableViewCell() }
         switch indexPath.row {
         case 0:
-            cell.amountLabelText = "\(investmentResult.totalCurrentValue)"
+            cell.amountLabelText = investmentResult.totalCurrentValue
             cell.investementLabelText = "Current Value:"
         case 1:
-            cell.amountLabelText = "\(investmentResult.totalInvestment)"
+            cell.amountLabelText = investmentResult.totalInvestment
             cell.investementLabelText = "Total Investment:"
         case 2:
-            cell.amountLabelText = "\(investmentResult.todaysProfitAndLoss)"
+            cell.amountLabelText = investmentResult.todaysProfitAndLoss
             cell.investementLabelText = "Today's Profit & Loss:"
         default:
             print("INVALID - INDEXPATH")
