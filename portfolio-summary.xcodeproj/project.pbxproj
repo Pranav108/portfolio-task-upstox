@@ -19,12 +19,10 @@
 		2F054DB22B9F720200145944 /* ExpendedFooterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F054DB02B9F720200145944 /* ExpendedFooterTableViewCell.xib */; };
 		2F054DB42B9F773800145944 /* HoldingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F054DB32B9F773800145944 /* HoldingsViewController.swift */; };
 		2F05749E2BA0B1D600CDD710 /* HoldingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F05749D2BA0B1D600CDD710 /* HoldingsViewModel.swift */; };
-		2F3FFC192BA0D64300431C69 /* CustomExpendedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FFC182BA0D64300431C69 /* CustomExpendedView.xib */; };
-		2F3FFC262BA0EC4200431C69 /* arrow-up-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FFC242BA0EC4200431C69 /* arrow-up-small.png */; };
-		2F3FFC272BA0EC4200431C69 /* arrow-down-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FFC252BA0EC4200431C69 /* arrow-down-small.png */; };
-		2F3FFC292BA0FC6900431C69 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FFC282BA0FC6900431C69 /* close.png */; };
+		2F3FFC192BA0D64300431C69 /* BottomInvestmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F3FFC182BA0D64300431C69 /* BottomInvestmentView.xib */; };
+		2FA66C882BA1656600CC1134 /* CommonDataModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA66C872BA1656600CC1134 /* CommonDataModal.swift */; };
 		2FD5484C2BA0D000007D402B /* HoldingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD5484B2BA0D000007D402B /* HoldingsViewController.xib */; };
-		2FD548522BA0D461007D402B /* CustomExpendedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD548502BA0D461007D402B /* CustomExpendedView.swift */; };
+		2FD548522BA0D461007D402B /* BottomInvestmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD548502BA0D461007D402B /* BottomInvestmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,12 +40,10 @@
 		2F054DB02B9F720200145944 /* ExpendedFooterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpendedFooterTableViewCell.xib; sourceTree = "<group>"; };
 		2F054DB32B9F773800145944 /* HoldingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingsViewController.swift; sourceTree = "<group>"; };
 		2F05749D2BA0B1D600CDD710 /* HoldingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoldingsViewModel.swift; sourceTree = "<group>"; };
-		2F3FFC182BA0D64300431C69 /* CustomExpendedView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomExpendedView.xib; sourceTree = "<group>"; };
-		2F3FFC242BA0EC4200431C69 /* arrow-up-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-up-small.png"; path = "Assets.xcassets/arrow-up-small.png"; sourceTree = "<group>"; };
-		2F3FFC252BA0EC4200431C69 /* arrow-down-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-down-small.png"; path = "Assets.xcassets/arrow-down-small.png"; sourceTree = "<group>"; };
-		2F3FFC282BA0FC6900431C69 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close.png; path = Assets.xcassets/close.png; sourceTree = "<group>"; };
+		2F3FFC182BA0D64300431C69 /* BottomInvestmentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomInvestmentView.xib; sourceTree = "<group>"; };
+		2FA66C872BA1656600CC1134 /* CommonDataModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDataModal.swift; sourceTree = "<group>"; };
 		2FD5484B2BA0D000007D402B /* HoldingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HoldingsViewController.xib; sourceTree = "<group>"; };
-		2FD548502BA0D461007D402B /* CustomExpendedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomExpendedView.swift; sourceTree = "<group>"; };
+		2FD548502BA0D461007D402B /* BottomInvestmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomInvestmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,20 +76,10 @@
 		2F054D8E2B9F681900145944 /* portfolio-summary */ = {
 			isa = PBXGroup;
 			children = (
-				2F3FFC282BA0FC6900431C69 /* close.png */,
-				2F3FFC252BA0EC4200431C69 /* arrow-down-small.png */,
-				2F3FFC242BA0EC4200431C69 /* arrow-up-small.png */,
-				2F054DAA2B9F6CC700145944 /* expendedView */,
-				2F054DA52B9F6AAE00145944 /* holdingTableViewCell */,
-				2F054D8F2B9F681900145944 /* AppDelegate.swift */,
-				2F054D912B9F681900145944 /* SceneDelegate.swift */,
-				2F054D932B9F681900145944 /* ViewController.swift */,
-				2F054D952B9F681900145944 /* Main.storyboard */,
-				2F054D982B9F681A00145944 /* Assets.xcassets */,
-				2F054D9A2B9F681A00145944 /* LaunchScreen.storyboard */,
-				2F054D9D2B9F681A00145944 /* Info.plist */,
+				2FA66C862BA15E8100CC1134 /* supporting-files */,
+				2FA66C8B2BA16B1C00CC1134 /* model */,
 				2F05749C2BA0B1AF00CDD710 /* viewModel */,
-				2F05749B2BA0B19C00CDD710 /* controllers */,
+				2F05749B2BA0B19C00CDD710 /* view */,
 			);
 			path = "portfolio-summary";
 			sourceTree = "<group>";
@@ -116,13 +102,17 @@
 			path = expendedView;
 			sourceTree = "<group>";
 		};
-		2F05749B2BA0B19C00CDD710 /* controllers */ = {
+		2F05749B2BA0B19C00CDD710 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				2F054DB32B9F773800145944 /* HoldingsViewController.swift */,
-				2FD5484B2BA0D000007D402B /* HoldingsViewController.xib */,
+				2F054D932B9F681900145944 /* ViewController.swift */,
+				2F054D952B9F681900145944 /* Main.storyboard */,
+				2F054D9A2B9F681A00145944 /* LaunchScreen.storyboard */,
+				2F054DAA2B9F6CC700145944 /* expendedView */,
+				2F054DA52B9F6AAE00145944 /* holdingTableViewCell */,
+				2FA66C8C2BA16B4A00CC1134 /* holdingViewController */,
 			);
-			path = controllers;
+			path = view;
 			sourceTree = "<group>";
 		};
 		2F05749C2BA0B1AF00CDD710 /* viewModel */ = {
@@ -145,10 +135,38 @@
 		2F3FFC1B2BA0D88500431C69 /* CustomExpendedView */ = {
 			isa = PBXGroup;
 			children = (
-				2F3FFC182BA0D64300431C69 /* CustomExpendedView.xib */,
-				2FD548502BA0D461007D402B /* CustomExpendedView.swift */,
+				2F3FFC182BA0D64300431C69 /* BottomInvestmentView.xib */,
+				2FD548502BA0D461007D402B /* BottomInvestmentView.swift */,
 			);
 			path = CustomExpendedView;
+			sourceTree = "<group>";
+		};
+		2FA66C862BA15E8100CC1134 /* supporting-files */ = {
+			isa = PBXGroup;
+			children = (
+				2F054D8F2B9F681900145944 /* AppDelegate.swift */,
+				2F054D912B9F681900145944 /* SceneDelegate.swift */,
+				2F054D982B9F681A00145944 /* Assets.xcassets */,
+				2F054D9D2B9F681A00145944 /* Info.plist */,
+			);
+			path = "supporting-files";
+			sourceTree = "<group>";
+		};
+		2FA66C8B2BA16B1C00CC1134 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2FA66C872BA1656600CC1134 /* CommonDataModal.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		2FA66C8C2BA16B4A00CC1134 /* holdingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2F054DB32B9F773800145944 /* HoldingsViewController.swift */,
+				2FD5484B2BA0D000007D402B /* HoldingsViewController.xib */,
+			);
+			path = holdingViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,15 +227,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F3FFC262BA0EC4200431C69 /* arrow-up-small.png in Resources */,
 				2F054DB22B9F720200145944 /* ExpendedFooterTableViewCell.xib in Resources */,
 				2F054D9C2B9F681A00145944 /* LaunchScreen.storyboard in Resources */,
-				2F3FFC272BA0EC4200431C69 /* arrow-down-small.png in Resources */,
 				2FD5484C2BA0D000007D402B /* HoldingsViewController.xib in Resources */,
 				2F054D992B9F681A00145944 /* Assets.xcassets in Resources */,
-				2F3FFC192BA0D64300431C69 /* CustomExpendedView.xib in Resources */,
+				2F3FFC192BA0D64300431C69 /* BottomInvestmentView.xib in Resources */,
 				2F054D972B9F681900145944 /* Main.storyboard in Resources */,
-				2F3FFC292BA0FC6900431C69 /* close.png in Resources */,
 				2F054DA92B9F6ACD00145944 /* HoldingTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -231,11 +246,12 @@
 			files = (
 				2F054D942B9F681900145944 /* ViewController.swift in Sources */,
 				2F054DA82B9F6ACD00145944 /* HoldingTableViewCell.swift in Sources */,
+				2FA66C882BA1656600CC1134 /* CommonDataModal.swift in Sources */,
 				2F054DB42B9F773800145944 /* HoldingsViewController.swift in Sources */,
 				2F054D902B9F681900145944 /* AppDelegate.swift in Sources */,
 				2F054D922B9F681900145944 /* SceneDelegate.swift in Sources */,
 				2F05749E2BA0B1D600CDD710 /* HoldingsViewModel.swift in Sources */,
-				2FD548522BA0D461007D402B /* CustomExpendedView.swift in Sources */,
+				2FD548522BA0D461007D402B /* BottomInvestmentView.swift in Sources */,
 				2F054DB12B9F720200145944 /* ExpendedFooterTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,7 +330,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -371,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -390,13 +406,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QWLN8N2YHZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "portfolio-summary/Info.plist";
+				INFOPLIST_FILE = "portfolio-summary/supporting-files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,13 +435,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QWLN8N2YHZ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "portfolio-summary/Info.plist";
+				INFOPLIST_FILE = "portfolio-summary/supporting-files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

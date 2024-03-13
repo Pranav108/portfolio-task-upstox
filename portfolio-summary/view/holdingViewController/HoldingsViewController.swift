@@ -10,7 +10,7 @@ import UIKit
 class HoldingsViewController: UIViewController {
     
     @IBOutlet weak var holdingTableView: UITableView!
-    @IBOutlet weak var expendableView: CustomExpendedView!
+    @IBOutlet weak var expendableView: BottomInvestmentView!
     @IBOutlet weak var expendedViewHeight: NSLayoutConstraint!
     
     var holdingsViewModel: HoldingsViewModel?
@@ -22,10 +22,9 @@ class HoldingsViewController: UIViewController {
         holdingsViewModel = HoldingsViewModel()
         holdingTableView.delegate = self
         holdingTableView.dataSource = self
-        holdingTableView.register(UINib(nibName: "HoldingTableViewCell", bundle: nil), forCellReuseIdentifier: "HoldingTableViewCell")
+        holdingTableView.register(UINib(nibName: Constants.XibName.holdingTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.XibName.holdingTableViewCell)
         
-        expendableView.isHidden = true
-        expendedViewHeight.constant = 0
+        expendedViewHeight.constant = Constants.HeightConstant.shrinkedBottomViewHeight
         
         holdingsViewModel?.getUserHoldings(completionHandler: { result in
             switch result {
@@ -42,27 +41,15 @@ class HoldingsViewController: UIViewController {
     private func expendableViewSetup(){
         guard let investmentResult = holdingsViewModel?.getInvestmentResult() else { return }
         
-        let screenHeight = UIScreen.main.bounds.height
-        let screenWidth = UIScreen.main.bounds.width
-        let expendedViewHeight : CGFloat = 230
-        let shrinkedViewHeight : CGFloat = 80
-        
         DispatchQueue.main.async {
             self.holdingTableView.reloadData()
-            
-            UIView.animate(withDuration: 1) {
-                self.expendableView.isHidden = false
-                self.expendedViewHeight.constant = expendedViewHeight
-//                self.view.layoutIfNeeded()
-                self.expendableView.bindDataToExpendedView(for: investmentResult)
-               
-            }
+            self.expendableView.bindDataToExpendedView(for: investmentResult)
         }
         
         self.expendableView.animateBottomViewForExpendStatus = { isExpended in
-            UIView.animate(withDuration: 1) {
-                self.expendedViewHeight.constant = isExpended ? expendedViewHeight : shrinkedViewHeight
-                self.expendableView.investmentTableViewheight.constant = isExpended ? 150 : 0
+            UIView.animate(withDuration: 0.4) {
+                self.expendedViewHeight.constant = isExpended ? Constants.HeightConstant.expendedBottomViewHeight : Constants.HeightConstant.shrinkedBottomViewHeight
+                self.expendableView.investmentTableViewheight.constant = isExpended ? Constants.HeightConstant.expendedBottomtableViewHeight : 0
                 self.view.layoutIfNeeded()
             }
         }
@@ -81,7 +68,7 @@ extension HoldingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let row = tableView.dequeueReusableCell(withIdentifier: "HoldingTableViewCell", for: indexPath) as? HoldingTableViewCell else { return UITableViewCell() }
+        guard let row = tableView.dequeueReusableCell(withIdentifier: Constants.XibName.holdingTableViewCell, for: indexPath) as? HoldingTableViewCell else { return UITableViewCell() }
         if let userHoldingData = userHoldings?[indexPath.row]{
             row.bindCellData(for: userHoldingData)
         }

@@ -17,10 +17,10 @@ class HoldingTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        symbolLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        ltpLabel.font = UIFont.systemFont(ofSize: 16)
-        quantityLabel.font = UIFont.systemFont(ofSize: 16,weight: .regular)
-        profitAndLossLabel.font = UIFont.systemFont(ofSize: 16)
+        symbolLabel.font = UIFont.systemFont(ofSize: Constants.FontConstant.commonFontHeight, weight: .bold)
+        ltpLabel.font = UIFont.systemFont(ofSize: Constants.FontConstant.commonFontHeight)
+        quantityLabel.font = UIFont.systemFont(ofSize: Constants.FontConstant.commonFontHeight,weight: .regular)
+        profitAndLossLabel.font = UIFont.systemFont(ofSize: Constants.FontConstant.commonFontHeight)
         
     }
     
@@ -35,7 +35,7 @@ class HoldingTableViewCell: UITableViewCell {
     private func getAttributedText(with prefix: String, and amount: Double) -> NSMutableAttributedString {
         let attributedString = NSMutableAttributedString(string: "\(prefix): ")
         let roundedAmountString = String(format: "%.2f", amount)
-        let boldedString = NSAttributedString(string: "\u{20B9} \(roundedAmountString)",attributes: [.font: UIFont.systemFont(ofSize: 16,weight: .semibold)])
+        let boldedString = NSAttributedString(string: "\u{20B9} \(roundedAmountString)",attributes: [.font: UIFont.systemFont(ofSize: Constants.FontConstant.commonFontHeight,weight: .semibold)])
         attributedString.append(boldedString)
         
         return attributedString
