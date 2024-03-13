@@ -11,23 +11,16 @@ class BottomInvestmentView: UIView{
     
     @IBOutlet weak var expendButton: UIButton!
     @IBOutlet weak var investmentTableView: UITableView!
-    
     @IBOutlet weak var investmentTableViewheight: NSLayoutConstraint!
-    
     @IBOutlet weak var profitAndLossTextLabel: UILabel!
     @IBOutlet weak var profitAndLossValueLable: UILabel!
     
     private var investmentResult: InvestmentResult?
     private var isExpended: Bool = false
     
+    // This callback will be used to animate the BottomInvestmentView
     var animateBottomViewForExpendStatus: ((_ isExpended: Bool) -> Void)?
-    
-    init(frame: CGRect, and investmentResult: InvestmentResult) {
-        self.investmentResult = investmentResult
-        super.init(frame: frame)
-        customInit()
-    }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         customInit()
@@ -45,7 +38,6 @@ class BottomInvestmentView: UIView{
         investmentTableView.register(UINib(nibName: Constants.XibName.expendedFooterTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.XibName.expendedFooterTableViewCell)
         
         expendButton.setImage(UIImage(systemName: Constants.ImageName.upTriangleArrow), for: .normal)
-        
         profitAndLossTextLabel.font = UIFont.systemFont(ofSize: Constants.FontConstant.commonFontHeight, weight: .bold)
         profitAndLossValueLable.font = UIFont.systemFont(ofSize: Constants.FontConstant.commonFontHeight)
         expendButton.imageView?.tintColor = .purple
@@ -99,7 +91,6 @@ extension BottomInvestmentView: UITableViewDelegate, UITableViewDataSource {
         default:
             print("INVALID - INDEXPATH")
         }
-        cell.bindCellData()
         return  cell
     }
     

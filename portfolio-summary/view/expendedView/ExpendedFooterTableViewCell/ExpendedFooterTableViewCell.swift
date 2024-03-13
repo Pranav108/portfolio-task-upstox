@@ -12,18 +12,18 @@ class ExpendedFooterTableViewCell: UITableViewCell {
     @IBOutlet weak var investementLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     
-    var investementLabelText: String?
-    var amountLabelText: String?
+    // will bin the data in UI when it will be set from BottomInvestmentView
+    var investementLabelText: String? {
+        didSet { investementLabel.text = investementLabelText }
+    }
+    var amountLabelText: String? {
+        didSet { amountLabel.text = amountLabelText }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         investementLabel.font = UIFont.systemFont(ofSize: Constants.FontConstant.commonFontHeight, weight: .bold)
         amountLabel.font = UIFont.systemFont(ofSize: Constants.FontConstant.commonFontHeight, weight: .regular)
-    }
-    
-    func bindCellData(){
-        investementLabel.text = investementLabelText
-        amountLabel.text = amountLabelText
     }
 }

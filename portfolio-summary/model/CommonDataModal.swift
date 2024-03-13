@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum RequestError: Error {
-    case invalidUrl
-    case failedRequest(error: Error?)
-    case errorDecode
-    case unknownError
+enum RequestError: String, Error {
+    case invalidUrl = "Invalid URL"
+    case failedRequest = "Request failed"
+    case errorDecode = "Error decoding"
+    case unknownError = "Something went wrong"
 }
 
 // MARK: JSON DataModals
@@ -65,5 +65,10 @@ enum Constants {
     
     enum FontConstant {
         static let commonFontHeight: CGFloat = 16
+    }
+    
+    enum CustomStringFormats {
+        static let rupeeSign = "\u{20B9}"
+        static let formattedValueString = "%.2f"
     }
 }

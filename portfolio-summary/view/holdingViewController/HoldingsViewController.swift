@@ -32,8 +32,7 @@ class HoldingsViewController: UIViewController {
                 self.userHoldings = success
                 self.expendableViewSetup()
             case .failure(let failure):
-                print("ERROR GETTING DATA FROM API")
-                print(failure.localizedDescription)
+                print("Error: \(failure.rawValue)")
             }
         })
     }
@@ -48,12 +47,16 @@ class HoldingsViewController: UIViewController {
         
         self.expendableView.animateBottomViewForExpendStatus = { isExpended in
             UIView.animate(withDuration: 0.4) {
-                self.expendedViewHeight.constant = isExpended ? Constants.HeightConstant.expendedBottomViewHeight : Constants.HeightConstant.shrinkedBottomViewHeight
-                self.expendableView.investmentTableViewheight.constant = isExpended ? Constants.HeightConstant.expendedBottomtableViewHeight : 0
+                if (isExpended) {
+                    self.expendedViewHeight.constant = Constants.HeightConstant.expendedBottomViewHeight
+                    self.expendableView.investmentTableViewheight.constant = Constants.HeightConstant.expendedBottomtableViewHeight
+                }else{
+                    self.expendedViewHeight.constant = Constants.HeightConstant.shrinkedBottomViewHeight
+                    self.expendableView.investmentTableViewheight.constant = 0
+                }
                 self.view.layoutIfNeeded()
             }
         }
-        
     }
     
     @IBAction func dismissHoldingsView(_ sender: UIButton) {
@@ -69,9 +72,7 @@ extension HoldingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let row = tableView.dequeueReusableCell(withIdentifier: Constants.XibName.holdingTableViewCell, for: indexPath) as? HoldingTableViewCell else { return UITableViewCell() }
-        if let userHoldingData = userHoldings?[indexPath.row]{
-            row.bindCellData(for: userHoldingData)
-        }
+        row.userHoldingdata = userHoldings?[indexPath.row]
         return row
     }
     

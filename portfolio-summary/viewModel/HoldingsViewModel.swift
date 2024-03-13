@@ -22,8 +22,8 @@ class HoldingsViewModel {
                 completionHandler(result)
             }
             
-            if let error {
-                result = .failure(.failedRequest(error: error))
+            if error != nil {
+                result = .failure(.failedRequest)
             }
             
             guard let apiData else {
@@ -55,10 +55,11 @@ class HoldingsViewModel {
         }
         let totalProfitAndLoss: Double = totalCurrentValue - totalInvestment
         
-        let totalCurrentValueStr = String(format: "\u{20B9}%.2f", totalCurrentValue)
-        let totalInvestmentStr = String(format: "\u{20B9}%.2f", totalInvestment)
-        let todaysProfitAndLossStr = String(format: "\u{20B9}%.2f", todaysProfitAndLoss)
-        let totalProfitAndLossStr = String(format: "\u{20B9}%.2f", totalProfitAndLoss)
+        let investmentValueFormat = Constants.CustomStringFormats.rupeeSign + Constants.CustomStringFormats.formattedValueString
+        let totalCurrentValueStr = String(format: investmentValueFormat, totalCurrentValue)
+        let totalInvestmentStr = String(format: investmentValueFormat, totalInvestment)
+        let todaysProfitAndLossStr = String(format: investmentValueFormat, todaysProfitAndLoss)
+        let totalProfitAndLossStr = String(format: investmentValueFormat, totalProfitAndLoss)
         
         return InvestmentResult(totalCurrentValue: totalCurrentValueStr, totalInvestment: totalInvestmentStr, totalProfitAndLoss: todaysProfitAndLossStr, todaysProfitAndLoss: totalProfitAndLossStr)
     }
